@@ -1,0 +1,85 @@
+
+\documentclass[12pt]{scrartcl}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{scrlayer-scrpage}
+
+\clearpairofpagestyles
+\chead{\headmark}
+\cfoot*{\pagemark}
+\setkomafont{pageheadfoot}{\sffamily}
+\setkomafont{pagination}{}
+
+
+\title{Pflichtenheft: MiniMax Algorithmus}
+\author{Marvin Parchainski, Jascha Oelmann, Nils Rüttgers und Fabian Siffert}
+\date{\today{},Düsseldorf}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+    %textbf bold/fett
+    \textbf{
+    \Huge{Pflichtenheft: MiniMax-Algorithmus}\\[15cm]
+    }
+    \Large{Marvin Parchainski, Jascha Oelmann, Nils Rüttgers und Fabian Siffert}\\[1cm]
+    \large{Heinrich-Hertz-Berufskolleg\\{\today}}
+    \end{center}
+\end{titlepage}
+%pagestyle empty -> Seitenzahl entfernt
+\thispagestyle{empty}
+\stepcounter{page}
+
+ 
+\newpage
+
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+
+\section{Einleitung}
+\label{sec:einleitung}
+
+MiniMax Algorithmus
+
+\begin{itemize}
+    \item Python
+    \begin{enumerate}
+        \item Games
+        \item Pflichten
+    \end{enumerate}
+    \item Heft
+\end{itemize}
+
+
+
+Hier ein Verweis auf Abschnitt Nummer: \ref{sec:einleitung}
+
+\section{Auftrag}
+\subsection{Spielauswahl}
+\subsubsection{Bauernschach}
+\subsubsection{Dame}
+\subsubsection{Tic-Tac-Toe}
+
+\section{Bereits bestehende Systeme oder Produkte}
+\section{Teams und Schnittstellen}
+\section{Rahmenbedingungen}
+\section{Technische Anforderungen}
+\section{Problemanalyse}
+\section{Qualität}
+\section{Projektentwicklung}
+
+		
+% HOW TO: LATEX IMAGE
+%\begin{center}
+% \includegraphics[width=0.1\textwidth] {TUG-logo}
+%\end{center}	
+%Das Bild zeigt ein TUG-logo\footnote{Hier ein footnote Beispiel.}.
+
+
+\end{document}
