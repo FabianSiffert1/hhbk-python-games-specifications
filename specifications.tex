@@ -1,11 +1,12 @@
 
-\documentclass[12pt]{scrartcl}
+\documentclass[14pt]{scrartcl}
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
 \usepackage{scrlayer-scrpage}
+\usepackage{setspace} 
 
 \clearpairofpagestyles
 \chead{\headmark}
@@ -19,6 +20,7 @@
 \date{\today{},Düsseldorf}
 
 \begin{document}
+\onehalfspacing
 
 \begin{titlepage}
     \begin{center}
@@ -42,8 +44,37 @@
 
 \newpage
 
-\section{Einleitung}
-\label{sec:einleitung}
+\section{Zielbestimmung}
+\label{sec:zielbestimmung}
+
+Die Computerspiele-Entwickler HHBK Tendo Research Centers hat uns damit beauftragt, Forschung bezüglich des MiniMax-Algorithmus zu Erstellungbetreiben. Ziel ist die Programmierung eines Prototypen zweier Spiele in vereinfachter Form. \par 
+
+
+\subsection{Musskriterien}
+
+\begin{itemize}
+    \item Für den Prototypen sollen mindestens zwei der Spiele als Python Anwendung entwickelt werden.
+    \item Für die GUI (Graphical User Interface) soll das tkinter-Modul, guizero oder Pygame verwendet
+    \item Für die optimale Spielstrategie soll der Minimax-Algorithmus mit variabler Suchtiefe und
+    entsprechender Bewertungsfunktion implementiert werden.
+    \item Verwendung einer SQLite-Datenbank zur Verwaltung der Benutzerdaten und Spielstände.
+    \item Anzeige der jeweiligen Spielregeln.
+\end{itemize}
+
+
+\subsection{Wunschkritierien}
+
+\begin{itemize}
+    \item Verwendung von Alpha-Beta-Pruning zur Optimierung des Minimax-Algorithmus.
+    \item Möglichkeit zur Einbindung anderer KI’s (Vereinbarung einer Schnittstelle)
+\end{itemize}
+
+
+\subsection{Abgrenzungskriterien}
+
+\begin{itemize}
+    \item Das Spiel wird von einem Spieler am PC gespielt. Netzwerkfähigkeit ist nicht gefordert!
+\end{itemize}
 
 MiniMax Algorithmus
 
@@ -58,20 +89,38 @@ MiniMax Algorithmus
 
 
 
-Hier ein Verweis auf Abschnitt Nummer: \ref{sec:einleitung}
+Hier ein Verweis auf Abschnitt Nummer: \ref{sec:zielbestimmung}
 
 \section{Auftrag}
+
+
 \subsection{Spielauswahl}
 \subsubsection{Bauernschach}
 \subsubsection{Dame}
 \subsubsection{Tic-Tac-Toe}
 
 \section{Bereits bestehende Systeme oder Produkte}
+
+
+Ein wichtiger Teil der Spiele ist das Verhalten der Künstlichen Intelligenz (KI). Dieses basiert auf dem MiniMax Algorithmus.
+
 \section{Teams und Schnittstellen}
+
+Um eine gemeinsame Basis zu schaffen arbeitet unser Team zunächst als Einheit. Wir diskutieren, wie wir die Anforderungen des Lastenhefts des HHBK Tendo Research Centers am sinnvollsten erfüllen können. \par 
+
+Auch die Programmierung beginnen wir zunächst zusammen und arbeiten nach dem Driver-System der Scrum-Arbeitsweise. 
+Wichtig hierbei ist es, das die Spiele auf der selben Grundstruktur basieren. \par
+
+Erst für die Programmierung der beiden individuellen Spiele teilen wir uns dann in zwei Teams auf. \par 
+
 \section{Rahmenbedingungen}
+
 \section{Technische Anforderungen}
+
 \section{Problemanalyse}
+
 \section{Qualität}
+
 \section{Projektentwicklung}
 
 		
