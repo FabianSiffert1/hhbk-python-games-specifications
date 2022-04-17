@@ -43,7 +43,7 @@
 \thispagestyle{empty}
 
 \newpage
-
+\setcounter{page}{1}
 \section{Zielbestimmung}
 \label{sec:zielbestimmung}
 
@@ -87,19 +87,15 @@ Die Computerspiele-Entwickler HHBK Tendo Research Centers hat uns damit beauftra
 %\end{itemize}
 %Hier ein Verweis auf Abschnitt Nummer: \ref{sec:zielbestimmung}
 
-\section{Auftrag}
+%\section{Auftrag}
 
 
-\subsection{Spielauswahl}
-\subsubsection{Bauernschach}
-\subsubsection{Dame}
-\subsubsection{Tic-Tac-Toe}
+%\subsection{Spielauswahl}
+%\subsubsection{Bauernschach}
+%\subsubsection{Dame}
+%\subsubsection{Tic-Tac-Toe}
 
-\section{Bereits bestehende Systeme oder Produkte}
-
-
-Ein wichtiger Teil der Spiele ist das Verhalten der Künstlichen Intelligenz (KI). Dieses basiert auf dem MiniMax Algorithmus.
-
+\newpage
 \section{Teams und Schnittstellen}
 
 Um eine gemeinsame Basis zu schaffen arbeitet unser Team zunächst als Einheit. Wir diskutieren, wie wir die Anforderungen des Lastenhefts des HHBK Tendo Research Centers am sinnvollsten erfüllen können. \par 
@@ -109,16 +105,79 @@ Wichtig hierbei ist es, das die Spiele auf der selben Grundstruktur basieren. \p
 
 Erst für die Programmierung der beiden individuellen Spiele teilen wir uns dann in zwei Teams auf. \par 
 
-\section{Rahmenbedingungen}
+\section{Einsatzbereich}
 
-\section{Technische Anforderungen}
+Dieses Projekt ist ein Protoyp, somit ist eines der Ziele ein Proof-of-Concept. Hierbei geht es um das Testen der 
+eigentlichen Spielestrategie, sowie um das Ausloten der vom Kunden gewünschten Funktionen \par
 
-\section{Problemanalyse}
+Sollte das Produkt sich bewähren, so wäre es im Freizeitbereich angesiedelt. \par
 
-\section{Qualität}
+Die Zielgruppe sind hautpsächlich Strategiespiel-Interessierte Menschen im Alter von 12-99 Jahren. Wir setzen Basiskentnisse
+bzgl. Computerbedienung und Computerspielen voraus. Die Spielregeln der beiden Spiele kann man sich über die GUI anzeigen lassen und sind somit
+keine Voraussetzung.\par
 
-\section{Projektentwicklung}
 
+\section{Produktübersicht}
+
+
+Ein wichtiger Teil der Spiele ist das Verhalten der Künstlichen Intelligenz (KI). Dieses basiert auf dem MiniMax Algorithmus.
+
+
+
+\section{Technische Anforderungen / Funktionen}
+
+Wichtig ist die sinnvolle Integration eines modularen Fenstermanagement-Systems. \par
+
+\section{Leistungen}
+
+\section{Qualitätsanforderungen}
+
+\section{Benutzeroberfläche}
+
+
+
+\section{Sonstige Anforderungen}
+\section{Technisches Umfeld}
+
+Die technischen Anforderungen an die Soft- und Hardwaresysteme der Endgeräte sind gering.\par
+Durch die Wahl des tkinter-Moduls haben wir sichergestellt, dass eine große Kompabilität zu verschiedenen Betriebssystemen gegeben ist. Die einzige Vorraussetzung ist
+somit die Installation einer aktuellen Python-Version.\par 
+
+\newpage
+\section{Gliederung}
+
+\begin{itemize}
+    \item MiniMax Algorithmus
+    \begin{enumerate}
+        \item Erstellung des Pflichtenhefts in LaTEX
+        \item Erstellung einer modularen GUI
+        \begin{enumerate}
+            \item Erstellen der verschiedenen Screens. Beispielsweise: Startbildschirm
+            \item Erstellen der Oberfläche der Scoreboards
+            \item Erstellen der Oberfläche der Spieleregeln
+        \end{enumerate}
+        \item Testen der GUI
+        \item Erstellung beider Spiele
+        \begin{enumerate}
+            \item Implementation der Funktionen der Spieler
+            \item Implementation des MiniMax Algorithmus
+            \item Implementation der Künstlichen Intelligenz
+            \item Implementation des Scoreboards \& einer entsprechenden Datenbank
+            \item Implementation eines Speichersystems
+            \item (Optional) Implementation von Alpha-Beta-Pruning
+            \item (Optional) Implementation einer KI-Schnittstelle
+            \item (Optional) Hilfefunktion: Einbledeoption für einen guten nächsten Zug
+            \item (Optional) Implementation verschiedener Schwierigkeitsstufen
+        \end{enumerate}
+        \item Testen der Spiele
+    \end{enumerate}
+\end{itemize}
+
+\newpage
+\section{Ergänzungen}
+
+\newpage
+\section{Tests}
 		
 % HOW TO: LATEX IMAGE
 %\begin{center}
