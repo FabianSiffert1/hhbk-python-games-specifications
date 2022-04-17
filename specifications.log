@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.10)  17 APR 2022 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.10)  17 APR 2022 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -308,34 +308,39 @@ imax-Algorithmus.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [1] [2] [3]
-[4] [5] [6] (./specifications.aux)
+) [1]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+ []
 
- ) 
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+[4] [5] [6] [7] (./specifications.aux) ) 
 Here is how much of TeX's memory you used:
  7135 strings out of 483130
  153751 string characters out of 5963883
- 517526 words of memory out of 5000000
+ 518526 words of memory out of 5000000
  22125 multiletter control sequences out of 15000+600000
  540529 words of font info for 37 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,19n,65p,10121b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.6
-00pk> </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm144
-0.600pk> </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx
-1728.600pk> </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm1440.600pk> </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecsx1440.600pk> </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfour/jknappe
-n/ec/ecsx2074.600pk> </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecrm1728.600pk> </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecrm2074.600pk> </home/siffert/.texlive2019/texmf-var/fonts/pk/ljfou
-r/jknappen/ec/ecbx3583.600pk>
-Output written on specifications.pdf (8 pages, 101531 bytes).
+ 42i,18n,66p,10121b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/siffert/.texlive2019/texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecss1440.600pk> </home/siffert/.texlive2019/texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk> </home/siffert/.texlive2019/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecsx1728.600pk> </home/siffert/.texlive2019/t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/siffert/.texlive201
+9/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1440.600pk> </home/siffert/.texlive
+2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx2074.600pk> </home/siffert/.texl
+ive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/siffert/.t
+exlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk> </home/siffert
+/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx3583.600pk>
+Output written on specifications.pdf (9 pages, 108457 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 344 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

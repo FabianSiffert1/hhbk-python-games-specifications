@@ -76,35 +76,8 @@ Die Computerspiele-Entwickler HHBK Tendo Research Centers hat uns damit beauftra
     \item Das Spiel wird von einem Spieler am PC gespielt. Netzwerkfähigkeit ist nicht gefordert!
 \end{itemize}
 
-%MiniMax Algorithmus
-%\begin{itemize}
-%    \item Python
-%    \begin{enumerate}
-%        \item Games
-%        \item Pflichten
-%    \end{enumerate}
-%    \item Heft
-%\end{itemize}
-%Hier ein Verweis auf Abschnitt Nummer: \ref{sec:zielbestimmung}
-
-%\section{Auftrag}
-
-
-%\subsection{Spielauswahl}
-%\subsubsection{Bauernschach}
-%\subsubsection{Dame}
-%\subsubsection{Tic-Tac-Toe}
 
 \newpage
-\section{Teams und Schnittstellen}
-
-Um eine gemeinsame Basis zu schaffen arbeitet unser Team zunächst als Einheit. Wir diskutieren, wie wir die Anforderungen des Lastenhefts des HHBK Tendo Research Centers am sinnvollsten erfüllen können. \par 
-
-Auch die Programmierung beginnen wir zunächst zusammen und arbeiten nach dem Driver-System der Scrum-Arbeitsweise. 
-Wichtig hierbei ist es, das die Spiele auf der selben Grundstruktur basieren. \par
-
-Erst für die Programmierung der beiden individuellen Spiele teilen wir uns dann in zwei Teams auf. \par 
-
 \section{Einsatzbereich}
 
 Dieses Projekt ist ein Protoyp, somit ist eines der Ziele ein Proof-of-Concept. Hierbei geht es um das Testen der 
@@ -119,43 +92,163 @@ keine Voraussetzung.\par
 
 \section{Produktübersicht}
 
+Wir haben uns für die Spiele Bauernschach und Dame entschieden. Welches Spiel gespielt werden soll, kann nach Starten des Programms ausgewählt werden. Je nachdem wird die Logik und das Interface abgerufen. \par 
 
-Ein wichtiger Teil der Spiele ist das Verhalten der Künstlichen Intelligenz (KI). Dieses basiert auf dem MiniMax Algorithmus.
+Die Regeln der Spiele, die implementiert werden, lauten wie folgt: \newline
 
+\begin{itemize}
+    \item Spieler
+    \begin{enumerate}
+        \item Es gibt exakt 2 Spieler die gegeneinander spielen
+    \end{enumerate}
+    \item Spielfeld
+    \begin{enumerate}
+        \item Das 6x6 groß, also 36 Felder
+        \item  Jedes Feld ist eindeutig mit einer ID gekennzeichnet
+        \item  Abwechselndes Farbmuster zwischen grau und weiß, so dass kein Feld an     
+        ein anderes mit derselben Farbe angrenzt
+    \end{enumerate}
+    \item Bauernschach
+    \begin{enumerate}
+        \item Figuren
+        \begin{enumerate}
+            \item 2 Teams mit je einem Design, also voneinander durch Farbe Unterscheidbar
+            \item Es darf maximal eine Figur(genannt Bauer) auf einem Feld sein
+        \end{enumerate}
+        \item Startanordung
+        \begin{enumerate}
+            \item Die oberste und unterste  ganze Reihe ist mit je einer Figur pro Feld gefüllt. Oben Spieler 1, unten Spieler 2.
+        \end{enumerate}
+        \item  Bewegungsmuster
+        \begin{enumerate}
+            \item Ziehen: Bewegen des Bauern um 1 Feld vertikal, NUR in die Richtung des 
+            Gegners möglich, dies ist nur möglich wenn das Feld vor ihm leer ist.
+            \item Schlagen: Bewegen des Bauern um 1 Feld diagonal, NUR in die Richtung des
+            Gegners möglich, dies ist nur möglich wenn das Feld von einem Gegner belegt ist.
+        \end{enumerate}
+        \item  Ziel des Spiels
+        \begin{enumerate}
+            \item Entweder: Einen Bauern auf der Grundlinie des Gegners platzieren(der Spieler der das
+            erreicht gewinnt)
+            \item Oder: Alle Bauern des Gegners schlagen
+            \item Oder: Den Gegner dazu bringen, dass er nicht mehr ziehen kann
+        \end{enumerate}
+    \end{enumerate}
+    \item Dame
+    \begin{enumerate}
+        \item {Figuren}
+        \begin{enumerate}
+        \item 2 Teams mit je einem Design, also voneinander farblich unterscheidbar
+        \item  Es darf maximal eine Figur auf einem Feld sein
+        \end{enumerate}
+        \item Startanordung
+        \begin{enumerate}
+            \item Die obersten und untersten 2 Reihen sind mit je einer Figur pro grauem Feld 
+            gefüllt. Oben Spieler 1, unten Spieler 2        
+        \end{enumerate}
+        \item  Bewegungsmuster
+        \begin{enumerate}
+            \item Ziehen: jeweils ein Feld diagonal nach vorne und nach hinten, wenn das Feld 
+            leer ist.
+            \item Schlagen:  Es herrscht Schlagzwang.\newline
+            Diagonal, beim Überspringen des gegnerischen Spielsteins,
+           Wenn ein weiterer gegnerischer Stein diagonal dahinter ist, wird 
+           dieser ebenfalls geschlagen. Dies ist so lange möglich, bis dort kein Stein mehr vorhanden ist. Dies geht aber nur wenn das hinterste Feld leer ist. Die 
+           übersprungenen Steine werden dann vom Feld genommen.
+        \end{enumerate}
+        \item  Ziel des Spiels
+        \begin{enumerate}
+            \item Entweder: Einen Bauern auf der Grundlinie des Gegners platzieren(der Spieler der das
+            erreicht gewinnt)
+            \item Oder: Alle Spielsteine des Gegners schlagen
+            \item Oder: Den Gegner dazu bringen, dass er nicht mehr ziehen kann
+        \end{enumerate}
+    \end{enumerate}
+\end{itemize}
+    
 
 
 \section{Technische Anforderungen / Funktionen}
 
-Wichtig ist die sinnvolle Integration eines modularen Fenstermanagement-Systems. \par
+Zu den Anforderungen an den Prototypen gehört ein Fokus auf wiederverwendbare Software. Deswegen wird ein besonderer Fokus auf 
+eine modulare und funktionsorientierte Architektur gelegt.\par
 
-\section{Leistungen}
+
+Die folgenden Funktionen werden implementiert: \newline
+
+\begin{itemize}
+\item Modulares Fenster Management
+\begin{enumerate}
+    \item Erstellen des HauptFenster UI
+    \item Erstellen des Einstellungs UI
+    \item Erstellen des Schwierigkeitsauswahl UI
+    \item Erstellen des Scoreboard UI
+\end{enumerate}
+
+\item Score Board
+\begin{enumerate}
+    \item Implementation einer Datenbank (SQLite)
+    \item Implementation eines Ranking System
+\end{enumerate}
+
+\item Einstellungs-System
+
+\item Speicher und Ladefunktion
+\begin{enumerate}
+    \item Spielstand
+    \item Einstellungen
+\end{enumerate}
+
+\item Spielsystem
+\begin{enumerate}
+    \item Brettlayout (6x6 Grid)
+    \item Score
+    \item Bewegungregeln
+    \item Figurenmanagement
+    \item Gewinnregeln
+\end{enumerate}
+
+\item MiniMax
+\begin{enumerate}
+    \item MiniMax Funktion
+    \item Spielstandevaluation 
+    \item Schwierigkeitsgrad variabel über suboptimale Spielzüge der KI
+    \item Hilfefunktion für Spieler (Hints)
+\end{enumerate}
+
+\end{itemize}
+
+
 
 \section{Qualitätsanforderungen}
 
-\section{Benutzeroberfläche}
-
-
 
 \section{Sonstige Anforderungen}
+\begin{itemize}
+    \item Technische Dokumentation als PDF.
+    \item Projektabschluss durch Präsentation und Live Demo.
+    \item Bereitstellung aller Quellcodedateien incl. Datenbank.
+    \item Lauffähiger Prototyp der Spielesammlung
+\end{itemize}
+
 \section{Technisches Umfeld}
 
-Die technischen Anforderungen an die Soft- und Hardwaresysteme der Endgeräte sind gering.\par
+Die technischen Anforderungen an die Soft- und Hardwaresysteme der Endgeräte sind gering.
 Durch die Wahl des tkinter-Moduls haben wir sichergestellt, dass eine große Kompabilität zu verschiedenen Betriebssystemen gegeben ist. Die einzige Vorraussetzung ist
 somit die Installation einer aktuellen Python-Version.\par 
 
+Windows und Linux sind die Betriebssysteme welche wir zur Entwicklung des Prototypen Nutzen. Python 3.8 und höher ist auf unseren Geräten installiert.\par
+
 \newpage
-\section{Gliederung}
+
+\section{Projektstrukturplan}
 
 \begin{itemize}
     \item MiniMax Algorithmus
     \begin{enumerate}
         \item Erstellung des Pflichtenhefts in LaTEX
+        \item Erstellen der technischen Dokumentation in LaTEX, parralel zur Programmierung
         \item Erstellung einer modularen GUI
-        \begin{enumerate}
-            \item Erstellen der verschiedenen Screens. Beispielsweise: Startbildschirm
-            \item Erstellen der Oberfläche der Scoreboards
-            \item Erstellen der Oberfläche der Spieleregeln
-        \end{enumerate}
         \item Testen der GUI
         \item Erstellung beider Spiele
         \begin{enumerate}
@@ -174,11 +267,34 @@ somit die Installation einer aktuellen Python-Version.\par
 \end{itemize}
 
 \newpage
-\section{Ergänzungen}
+\section{Projektzeitplan}
 
-\newpage
-\section{Tests}
-		
+Wir haben 7 Arbeitstage Zeit um das Projekt umzusetzen. Anhand 
+der von uns festgelegten Meilensteine können wir sicherstellen, dass wir im Zeitplan liegen.\par
+
+\subsection{Meilensteine}
+
+\begin{itemize}
+    \item Meilensteine
+    \begin{enumerate}
+    \item * Erstellung des Pflichtenheftes vor Beginn der Programmierung 
+    \item * Erstellung und parralele aktualisierung der technischen Dokumentation 
+    \item ** Erstellen einer modularen GUI 
+    \item *** Parralele Erstellung beider Spiele 
+    \end{enumerate}
+\end{itemize}
+
+Hierbei kennzeichnen die '*' den geschätzten benötigten Zeitaufwand. Somit ist es uns wichtig, die GUI möglichst schnell, also hoffentlich innerhalb von 2 Tagen zu Erstellen, so das wir genügend Zeit haben, um die Spiele fehlerfrei und mit Zeitpuffer zu implementieren. \par
+
+\subsection{Teams und Schnittstellen}
+
+Um eine effiziente Handlungsbasis zu schaffen arbeitet unser Team zunächst als Einheit. Wir diskutieren, wie wir die Anforderungen des Lastenhefts des HHBK Tendo Research Centers am sinnvollsten erfüllen können. \par 
+
+Auch die Programmierung beginnen wir zunächst zusammen und arbeiten nach dem Driver-System der Scrum-Arbeitsweise. 
+Wichtig hierbei ist es, das die Spiele auf der selben Grundstruktur basieren. \par
+
+Erst für die Programmierung der beiden individuellen Spiele teilen wir uns dann in zwei Teams auf. \par 
+
 % HOW TO: LATEX IMAGE
 %\begin{center}
 % \includegraphics[width=0.1\textwidth] {TUG-logo}
